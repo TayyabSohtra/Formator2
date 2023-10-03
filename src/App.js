@@ -11,8 +11,6 @@ import {
   Route
 } from "react-router-dom";
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
-
-
 function App() {
   const [alerts,setalerts] = useState(null)
   const showalert=(message,type)=>{
@@ -64,9 +62,7 @@ function App() {
       </Switch>
       </div>
     </Router>
-    </>
-    
+    </>   
   );
 }
-
 export default App;
