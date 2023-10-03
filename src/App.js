@@ -4,12 +4,13 @@ import { useState } from 'react';
 import Navbar from './component/Navbar';
 import Alert from './component/Alert';
 import Textbox from './component/Textbox';
-// import About from './component/About';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
+import About from './component/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 function App() {
@@ -49,20 +50,20 @@ function App() {
   }
   return (
     <>
-    {/* // <Router> */}
+    <Router basename="/Formator2">
     <Navbar title="Text Formator" Abouttext="About-us" Toggleevent={togglemode} Mode={mode}/>
     <Alert alert={alerts}/>
     <div className="container my-3">
+      <Switch>
+        <Route exact path="/Formator2">
           <Textbox heading="Enter the text to analyze" showalerts={showalert} mode={mode}/>
-    </div>
-      {/* <Switch> */}
-        {/* <Route exact path="/"> */}
-        {/* </Route> */}
-        {/* <Route exact path="/about"> */}
-          {/* <About /> */}
-        {/* </Route> */}
-      {/* </Switch> */}
-    {/* // </Router> */}
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+      </Switch>
+      </div>
+    </Router>
     </>
     
   );
