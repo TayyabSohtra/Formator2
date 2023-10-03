@@ -63,7 +63,7 @@ export default function Textbox(props) {
     <div class="container">
         <h1>{props.heading}</h1>
         <div className="mb-3">
-        <textarea className="form-control" id="textbox" rows="8" value={text} onChange={handleronchnage} style={{backgroundColor:props.Mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'black'}}></textarea>
+        <textarea className="form-control" id="textbox" rows="8" value={text} onChange={handleronchnage} style={{backgroundColor:props.Mode==='dark'?'grey':'white',color:props.Mode==='dark'?'white':'black'}}></textarea>
         <button className="btn btn-outline-primary" onClick={handleupclick}>Convert into UpperCase</button>
         <button className="btn btn-outline-primary mx-1 my-2" onClick={handleLoclick}>Convert into LowerCase</button>
         <button className="btn btn-outline-primary mx-1 my-2" onClick={handleclclick}>Clear Text</button>
